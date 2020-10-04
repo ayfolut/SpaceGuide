@@ -50,7 +50,11 @@ display: none;
     100% {transform: rotateY(360deg);}
 } */
 .loader{
-    background: #000000;
+    /* background: #000000; */
+    background-image: url("../img/drk.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -58,16 +62,23 @@ display: none;
     z-index: 1000000;
     overflow: hidden;
 }
-.loader img{
-    border-radius: 50%;
-    width: 0px; 
-    height: 0px;
-    animation: spin 5s ease-in-out;
+.loader .earth{
+    position: fixed;
+    z-index: -300;
+    margin: auto;
+    top: 85vh;
+    justify-self: center;
+    width: 50vw;
 }
-@keyframes spin {
-    0%   {width: 3px; height: 3px; display: block; margin-top: 30%; transform: rotate(0deg);}
-    50%   {width: 500px; height: 500px; margin-top: 0%;}
-    100%   {width: 2000px; height: 2000px; margin-top: -50%; margin-left: -20%; transform: rotate(-360deg); display: none;}
+.loader .img{
+    margin-top: -50vh;
+    animation: flyup 5s ease-in-out;
+}
+@keyframes flyup {
+    0%   {width: 5px; height: 8px; margin-top: 90vh; display: block;}
+    80%   {width: 200px; height: 250px; margin-top: 50vh;}
+    90%   {width: 250px; height: 300px; margin-top: 50vh;}
+    100%   {width: 300px; height: 350px; margin-top: -50vh; display: none;}
 }
 .rocket{
     height: 80px;

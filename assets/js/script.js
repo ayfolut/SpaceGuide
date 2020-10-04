@@ -18,7 +18,7 @@ setTimeout(() => {
             document.getElementById("bubble").style.display = "none";
         }, 2000);
     }, 4000);
-}, 9000);
+}, 13000);
 setInterval(() => {
     document.getElementById("rocket").style.display = "block";
     setTimeout(() => {
